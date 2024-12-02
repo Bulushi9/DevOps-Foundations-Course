@@ -5,7 +5,6 @@ stages:
   - deploy
 
 variables:
-  DOCKER_IMAGE: "your-docker-hub-username/calculator-app" # Replace with your Docker Hub repo
   NODE_ENV: production
 
 frontend-job:
