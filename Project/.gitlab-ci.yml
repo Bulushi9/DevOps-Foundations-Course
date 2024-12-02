@@ -1,38 +1,53 @@
-# TODO: Define stages for your pipeline
 stages:
+  - install
+  - build
+  - test
+  - deploy
 
-# TODO: Define variables (if needed)
 variables:
+  DOCKER_IMAGE: "your-docker-hub-username/calculator-app" # Replace with your Docker Hub repo
+  NODE_ENV: production
 
-# TODO: Define a job for building the frontend
 frontend-job:
-  stage: # TODO: Specify stage
-  image: # TODO: Specify Node.js image
+  stage: build
+  image: node:16
   script:
-    # TODO: Install dependencies
-    # TODO: Build the React app
+    - echo "Installing frontend dependencies..."
+    - npm install
+    - echo "Building the React frontend..."
+    - npm run build
+  artifacts:
+    paths:
+      - build/
 
-# TODO: Define a job for building and testing the backend
 backend-job:
-  stage: # TODO: Specify stage
-  image: # TODO: Specify Python image
+  stage: test
+  image: python:3.9-slim
   script:
-    # TODO: Install dependencies
-    # TODO: Run tests
+    - echo "Installing backend dependencies..."
+    - pip install -r requirements.txt
+    - echo "Running backend tests..."
+    - pytest
 
-# TODO: Define a job for building Docker images
 docker-build:
-  stage: # TODO: Specify stage
+  stage: build
   image: docker:latest
   services:
     - docker:dind
   script:
-    # TODO: Build frontend Docker image
-    # TODO: Build backend Docker image
-    # TODO: Push images to Docker Hub (if on main branch)
+    - echo "Building Docker images..."
+    - docker build -t $DOCKER_IMAGE-frontend ./frontend
+    - docker build -t $DOCKER_IMAGE-backend ./backend
+    - echo "Pushing Docker images to Docker Hub..."
+    - echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
+    - docker push $DOCKER_IMAGE-frontend
+    - docker push $DOCKER_IMAGE-backend
+  only:
+    - main
 
 # OPTIONAL: Define a deployment job (if applicable)
 deploy:
-  stage: # TODO: Specify stage
-  script:
-    # TODO: Add deployment steps
+  stage: deploy
+script:
+    - echo "Deploying application..."
+    - echo "Deployment steps go here, e.g., SSH to server or Kubernetes commands."

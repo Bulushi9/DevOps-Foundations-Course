@@ -126,17 +126,17 @@ Create a YAML configuration file with the following steps:
 
 **Please answer the following questions to ensure all the steps of the project are completed:**
 
-1. [ ] Have you created the Backend Dockerfile?
-   - [ ] Are you able to create the backend container and test the API?
-2. [ ] Have you created the Frontend Dockerfile?
-   - [ ] Are you able to create the frontend container and test the Web app?
-3. [ ] Have you created the docker-compose YAML file?
-   - [ ] Are you able to successfully run the compose file and test the application?
-4. [ ] Have you written the CI/CD YAML file?
-   - [ ] When you run your CI/CD pipeline, are all of your stages passing?
-5. [ ] Have you written the SUBMISSION_README file?
+1. [✅] Have you created the Backend Dockerfile?
+   - [✅] Are you able to create the backend container and test the API?
+2. [✅] Have you created the Frontend Dockerfile?
+   - [✅] Are you able to create the frontend container and test the Web app?
+3. [✅] Have you created the docker-compose YAML file?
+   - [✅] Are you able to successfully run the compose file and test the application?
+4. [✅] Have you written the CI/CD YAML file?
+   - [✅] When you run your CI/CD pipeline, are all of your stages passing?
+5. [✅] Have you written the SUBMISSION_README file?
 
-6. [ ] Is the latest Frontend Dockerfile, Backend Dockerfile, CI/CD YAML file, and README pushed to the GitHub repository?
+6. [✅] Is the latest Frontend Dockerfile, Backend Dockerfile, CI/CD YAML file, and README pushed to the GitHub repository?
 
 > **Note:** If you have answered **'YES'**/✅ to all the Checklist Questions, then good work! You have completed all steps of the project and are all set to submit your work!
 

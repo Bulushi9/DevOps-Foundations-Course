@@ -11,6 +11,11 @@ def validate_input_request_fields(data_request, required_fields):
     # Check if (data_request is empty) or (if any required field is missing)
     return ((not data_request) or (not all(field in data_request for field in required_fields)))
 
+# Default entry point
+@app.route('/')
+def home():
+    return jsonify({"message": "Welcome to the Flask API!"})
+
 # Test route for healthchecks
 @app.route('/api/test')
 def hello():
