@@ -26,13 +26,11 @@ jobs:
         run: npm install
         working-directory: ./Project/frontend
         
-      - name: Verify Babel and Jest Setup
-        run: npm run build
-        working-directory: ./Project/frontend
-
       - name: Run Tests
-        run: npm test -- --detectOpenHandles
+        run: npm test
         working-directory: ./Project/frontend
+        env:
+          CI: true
 
       - name: Build React App
         run: npm run build

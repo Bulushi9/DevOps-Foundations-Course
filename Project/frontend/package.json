@@ -18,11 +18,18 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "jest": {
+"jest": {
   "transform": {
-    "^.+\\.jsx?$": "babel-jest"
-  }
-},
+    "^.+\\.(js|jsx)$": "babel-jest"
+  },
+  "moduleNameMapper": {
+    "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+  },
+  "transformIgnorePatterns": [
+    "/node_modules/(?!axios|other-modules-that-need-transform)"
+  ]
+}
+,
   "eslintConfig": {
     "extends": [
       "react-app",
