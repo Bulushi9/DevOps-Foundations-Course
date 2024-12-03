@@ -25,9 +25,13 @@ jobs:
       - name: Install Dependencies
         run: npm install
         working-directory: ./Project/frontend
+        
+      - name: Verify Babel and Jest Setup
+        run: npm run build
+        working-directory: ./Project/frontend
 
       - name: Run Tests
-        run: npm test
+        run: npm test -- --detectOpenHandles
         working-directory: ./Project/frontend
 
       - name: Build React App
@@ -44,7 +48,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v3
         with:
-          python-version: 3.10
+          python-version: 3.9
 
       - name: Install Dependencies
         run: |
