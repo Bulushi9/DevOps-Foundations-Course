@@ -11,6 +11,10 @@ def validate_input_request_fields(data_request, required_fields):
     # Check if (data_request is empty) or (if any required field is missing)
     return ((not data_request) or (not all(field in data_request for field in required_fields)))
 
+@app.route('/')
+def home():
+    return "Backend server is running!"
+
 # Test route for healthchecks
 @app.route('/api/test')
 def hello():
