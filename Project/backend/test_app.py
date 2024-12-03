@@ -99,7 +99,7 @@ class TestApp(unittest.TestCase):
         response = self.client.post('/api/log', data=payload,
                                     content_type='application/json')
         self.assertEqual(response.status_code, 200)
-        self.assertAlmostEqual(response.json["result"], 2.302, places=3)
+        self.assertAlmostEqual(response.json["result"], 2.302585, places=6)
 
 if __name__ == '__main__':
     unittest.main()
