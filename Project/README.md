@@ -3,8 +3,6 @@
 ## Project Overview
 The goal of this project is to assess your understanding of Docker containerization and Continuous Integration/Continuous Deployment (CI/CD) principles. You will be provided with a simple calculator web application consisting of a **React frontend** and a **Python backend**. Your task is to containerize these components, create a multi-container setup using Docker Compose, and implement an automated CI/CD pipeline.
 
-**NOTE**: [Please **submit** your project here](https://airtable.com/appkB4tLGaUIf7rIf/shr6YX4kY3rUhMTIu): https://airtable.com/appkB4tLGaUIf7rIf/shr6YX4kY3rUhMTIu
-
 ## Learning Objectives
 After successful completion of this project, you will:
 1. Gain practical experience in containerizing existing applications using Docker.
@@ -111,9 +109,9 @@ Create a YAML configuration file with the following steps:
 ### Important Dates
 <!-- - **Project Assigned:** November 15, 2024 -->
 - **Submission Deadline:** December 4, 2024, 11:59 PM
-- **Submission Method:** Online submission form [Here](https://airtable.com/appkB4tLGaUIf7rIf/shr6YX4kY3rUhMTIu) Or https://airtable.com/appkB4tLGaUIf7rIf/shr6YX4kY3rUhMTIu
+- **Submission Method:** Online submission form 
 
-> **NOTE**: [FORM LINK](https://airtable.com/appkB4tLGaUIf7rIf/shr6YX4kY3rUhMTIu): https://airtable.com/appkB4tLGaUIf7rIf/shr6YX4kY3rUhMTIu
+> **NOTE: (_Form link will be available soon as deadline approaches._)**
 
 ### Submission Checklist 
 - [ ] Frontend Dockerfile  -------------------- ([`Project/frontend/Dockerfile`](https://github.com/shiftkey-labs/DevOps-Foundations-Course/blob/master/Project/frontend/Dockerfile))
@@ -128,17 +126,17 @@ Create a YAML configuration file with the following steps:
 
 **Please answer the following questions to ensure all the steps of the project are completed:**
 
-1. [ ] Have you created the Backend Dockerfile?
-   - [ ] Are you able to create the backend container and test the API?
-2. [ ] Have you created the Frontend Dockerfile?
-   - [ ] Are you able to create the frontend container and test the Web app?
-3. [ ] Have you created the docker-compose YAML file?
-   - [ ] Are you able to successfully run the compose file and test the application?
-4. [ ] Have you written the CI/CD YAML file?
-   - [ ] When you run your CI/CD pipeline, are all of your stages passing?
-5. [ ] Have you written the SUBMISSION_README file?
+1. [✅] Have you created the Backend Dockerfile?
+   - [✅] Are you able to create the backend container and test the API?
+2. [✅] Have you created the Frontend Dockerfile?
+   - [✅] Are you able to create the frontend container and test the Web app?
+3. [✅] Have you created the docker-compose YAML file?
+   - [✅] Are you able to successfully run the compose file and test the application?
+4. [✅] Have you written the CI/CD YAML file?
+   - [✅] When you run your CI/CD pipeline, are all of your stages passing?
+5. [✅] Have you written the SUBMISSION_README file?
 
-6. [ ] Is the latest Frontend Dockerfile, Backend Dockerfile, CI/CD YAML file, and README pushed to the GitHub repository?
+6. [✅] Is the latest Frontend Dockerfile, Backend Dockerfile, CI/CD YAML file, and README pushed to the GitHub repository?
 
 > **Note:** If you have answered **'YES'**/✅ to all the Checklist Questions, then good work! You have completed all steps of the project and are all set to submit your work!
 
